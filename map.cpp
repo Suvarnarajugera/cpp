@@ -21,19 +21,19 @@ map::begin() and end()	begin() returns an iterator to the first element in the m
 map::operator[]	This operator is used to reference the element present at the position given inside the operator.
 map::clear() 	Removes all the elements from the map.
 map::at() and map::swap()	at() function is used to return the reference to the element associated with the key k. swap() function is used to exchange the contents of two maps but the maps must be of the same type, although sizes may differ.*/
-#include<iostream>
+#include<iostream> // map is implemented by red black tree
 #include<algorithm>
 #include<cmath>
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    map<char,int>mp;
-    string s = "suvarnaraju";
-    int l = s.length();
-    cout << l;
-    for (int i =0 ; i< l; i++){
-        mp[s[i]]++;
-    }
+    // map<char,int>mp;
+    // string s = "suvarnaraju";
+    // int l = s.length();
+    // cout << l;
+    // for (int i =0 ; i< l; i++){
+    //     mp[s[i]]++;
+    // }
     // for (auto it : mp){
     //     cout << it.first << " " << it.second << endl; 
     // }
@@ -51,9 +51,39 @@ int main(){
     // else{
     //     cout << " not Present";
     // }
-    map<char,int>::iterator it = mp.begin();
-    while(it!=mp.end()){
-        cout << it->first << " " << it ->second<< endl;
-        it++;
+    // map<char,int>::iterator it = mp.begin();
+    // while(it!=mp.end()){
+    //     cout << it->first << " " << it ->second<< endl;
+    //     it++;
+    // }
+//     map<int,string>m;
+//     m[2] = "abc";  // time complextiy will be log(n)
+//     m[3] = "def";
+//     m[1] = "ghi";
+//     m.insert(make_pair(4,"ehk"));
+//     cout << m.size() << endl;
+//     for (auto it : m){
+//         cout << it.first<< " " << it.second << endl;
+//     }
+//     map<string,int>mp;
+//     mp["suvarna"] = 1; //time complexity is (len(string)*log(n))
+//     mp["vardhan"] = 2;
+//     mp["sriram"] = 3;
+//     mp["siva"] = 4;
+//     mp["daniel"] = 5;
+//     for (auto it :mp){
+//         cout << it .first << " " << it .second << endl;
+//     }
+
+
+// we can not use pair in unorderd map because pair cannot have any hashing
+
+    unordered_map<int,string>m; // its implentation follows hashing 
+    m[2] = "abc";
+    m[3] = "def";
+    m[1] = "ghi";
+    m.insert({6,"suv"});
+    for (auto it : m){
+        cout << it.first << " " << it .second << endl;
     }
 }
