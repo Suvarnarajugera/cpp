@@ -29,45 +29,85 @@
 using namespace std;
 int main()
 {
-    vector<int>v;
-    for (int i=0 ; i < 10 ; i++){
-        v.push_back(i);
+    // vector<int>v;
+    // for (int i=0 ; i < 10 ; i++){
+    //     v.push_back(i);
+    // }
+    // for (auto it =  v.begin() ; it!= v.end() ; ++it){ // printing elements from start to end
+    //     cout << *it << " " ;
+    // }
+    // cout << " " << endl;
+    // for (auto i = v.rbegin() ; i != v.rend() ; i++){ // printing elemnets from the last to first
+    //     cout << * i<< " ";
+    // }
+    // cout << " " << endl;
+    // for (auto a = v.cbegin(); a != v.cend() ; a++){
+    //     cout << *a << " ";
+    // }
+    // cout << v.size() << endl;
+    // cout << v.max_size() << endl;
+    // cout << v.capacity()<< endl;
+    // cout << v.empty() << endl;
+    // v.erase(v.begin()); 
+    // cout << v[0];
+    // v.insert(v.end(),1);
+    // for (auto it =  v.begin() ; it!= v.end() ; ++it){ // printing elements from start to end
+    //     cout << *it << " " ;
+    // }
+    // sort(v.begin(),v.end());
+    // for (auto it =  v.begin() ; it!= v.end() ; ++it){ // printing elements from start to end
+    //     cout << *it << " " ;
+    // }
+    // vector<int>v1;
+    // v1.push_back(10);
+    // v1.push_back(20);
+    // v1.swap(v);
+    // for (auto it : v){
+    //     cout << it << " " ;
+    // }
+    // cout << " " << endl;
+    // for (auto it : v1){
+    //     cout << it << " " ;
+    // }
+    // vector<int>A[3]; // here we are creating like [[][][]].
+    // for (int i = 0 ; i < 3 ; i++){
+    //     for (int j =0 ; j < 3 ; j++){
+    //         int x; 
+    //         cin >> x;
+    //         A[i].push_back(x);
+    //     }
+    // }
+    // for (int i = 0 ; i < 3 ; i++){
+    //     for (int j =0 ; j < 3 ; j++){
+    //         cout << A[i][j] << " " ;
+    //     }
+    //     cout <<endl;
+    // }
+    // vector<vector<int>>v;
+    // for (int i=0 ; i<3 ; i++){
+    //     vector<int>temp;
+    //     for (int j =0 ; j < 3 ; j++){
+    //         int x;
+    //         cin >> x;
+    //         temp.push_back(x);
+    //     }
+    //     v.push_back(temp);
+    // }
+    // for (int i=0 ; i<3 ; i++){
+    //     for (int j =0 ;j < 3; j++){
+    //         cout << v[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
+    vector<pair<int,int>>p;
+    for (int i=0 ; i< 3 ; i++){
+        int x,y;
+        cin >> x >> y;
+        // p.push_back({x,y});
+        p.push_back(make_pair(x,y));
     }
-    for (auto it =  v.begin() ; it!= v.end() ; ++it){ // printing elements from start to end
-        cout << *it << " " ;
+    for (int i = 0 ; i < 3 ; i++){
+        cout << p[i].first<< " "<< p[i].second ;
+        cout <<endl;
     }
-    cout << " " << endl;
-    for (auto i = v.rbegin() ; i != v.rend() ; i++){ // printing elemnets from the last to first
-        cout << * i<< " ";
-    }
-    cout << " " << endl;
-    for (auto a = v.cbegin(); a != v.cend() ; a++){
-        cout << *a << " ";
-    }
-    cout << v.size() << endl;
-    cout << v.max_size() << endl;
-    cout << v.capacity()<< endl;
-    cout << v.empty() << endl;
-    v.erase(v.begin()); 
-    cout << v[0];
-    v.insert(v.end(),1);
-    for (auto it =  v.begin() ; it!= v.end() ; ++it){ // printing elements from start to end
-        cout << *it << " " ;
-    }
-    sort(v.begin(),v.end());
-    for (auto it =  v.begin() ; it!= v.end() ; ++it){ // printing elements from start to end
-        cout << *it << " " ;
-    }
-    vector<int>v1;
-    v1.push_back(10);
-    v1.push_back(20);
-    v1.swap(v);
-    for (auto it : v){
-        cout << it << " " ;
-    }
-    cout << " " << endl;
-    for (auto it : v1){
-        cout << it << " " ;
-    }
-
 }
